@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "name": "free",
+  "kind": "application",
+  "origin": {
+    "repository": "https://github.com/roolrz/HypeR",
+    "commit": "8d42d047058a2b58a291803700e86487fb723f7a"
+  },
+  "sources": {
+    "Cargo.toml": "app/free/Cargo.toml",
+    "component.mk": "app/free/component.mk",
+    "src/cli.rs": "app/free/src/cli.rs",
+    "src/lib.rs": "app/free/src/lib.rs",
+    "src/main.rs": "app/free/src/main.rs",
+    "src/report.rs": "app/free/src/report.rs",
+    "tests/cli.rs": "app/free/tests/cli.rs",
+    "tests/report.rs": "app/free/tests/report.rs"
+  },
+  "SPDX-FileCopyrightText": "2026 roolrz",
+  "SPDX-License-Identifier": "Apache-2.0",
+  "mounts": {
+    "": "app/free"
+  },
+  "packages": [
+    "hyper-free"
+  ],
+  "tests": [
+    [
+      "make",
+      "app-test",
+      "APP_TEST_PACKAGE=hyper-free"
+    ]
+  ]
+}
