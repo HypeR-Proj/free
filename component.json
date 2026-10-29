@@ -30,5 +30,36 @@
       "app-test",
       "APP_TEST_PACKAGE=hyper-free"
     ]
-  ]
+  ],
+  "cargo_context": {
+    "Cargo.toml": {
+      "workspace": null,
+      "membership": "..",
+      "dependency_paths": {
+        "target.cfg(target_os = \"hyper\")/dependencies/hyper-clap-shared": "lib/clap",
+        "target.cfg(target_os = \"hyper\")/dependencies/hyper-tool-args-shared": "lib/tool-args/shared",
+        "target.cfg(not(target_os = \"hyper\"))/dependencies/hyper-tool-args": "lib/tool-args"
+      },
+      "inherited_dependencies": {
+        "/dependencies/clap": {
+          "workspace": true
+        },
+        "/dependencies/hyper-os": {
+          "workspace": true
+        },
+        "/dependencies/hyper-rt": {
+          "workspace": true
+        },
+        "target.cfg(target_os = \"hyper\")/dependencies/hyper-clap-shared": {
+          "workspace": true
+        },
+        "target.cfg(target_os = \"hyper\")/dependencies/hyper-tool-args-shared": {
+          "workspace": true
+        },
+        "target.cfg(not(target_os = \"hyper\"))/dependencies/hyper-tool-args": {
+          "workspace": true
+        }
+      }
+    }
+  }
 }
