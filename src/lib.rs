@@ -25,3 +25,6 @@ pub fn format_bytes(bytes: u64, exact: bool) -> String {
     let tenths = bytes % divisor * 10 / divisor;
     format!("{}.{tenths} {unit}", bytes / divisor)
 }
+
+#[cfg(target_os = "hyper")]
+extern crate hyper_clap_shared as clap;
