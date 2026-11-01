@@ -4,8 +4,6 @@
 //! Capability-scoped physical-memory summary.
 
 // Select the shared parser implementation for Native delivery.
-#[cfg(target_os = "hyper")]
-extern crate hyper_clap_shared as _;
 
 use clap::Parser;
 use hyper_os::inspect::MemoryInspector;
@@ -95,3 +93,6 @@ fn main() -> std::process::ExitCode {
         }
     }
 }
+
+#[cfg(target_os = "hyper")]
+extern crate hyper_clap_shared as clap;
